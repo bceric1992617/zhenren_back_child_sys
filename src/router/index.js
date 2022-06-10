@@ -7,7 +7,7 @@ export default new Router({
     routes: [
         {
             path: '/',
-            redirect:'/dataCenter/registerList',
+            redirect:'/sysCenter/roleManagement',
         },
         {
             path: '/',
@@ -16,45 +16,62 @@ export default new Router({
                 title: '整体页面布局'
             },
             children: [
-
-
-
-
                 {
                     path: '/dataCenter',
                     component: () => import('../page/dataCenter/index.vue'),
                     meta: {
                         title: '数据中心'
                     },
-                    redirect:'/dataCenter/registerList',
+                    redirect:'/dataCenter/tradeList',
                     children:[
-                        {
-                            path: 'registerList',
-                            component: () => import('../page/dataCenter/registerList.vue'),
-                            meta: {
-                                title: '注册查询'
-                            }
-                        },
                         {
                             path: 'tradeList',
                             component: () => import('../page/dataCenter/tradeList.vue'),
                             meta: {
-                                title: '交易记录查询'
+                                title: '交易单查询'
                             }
                         },
                         {
-                            path: 'tradeRecord',
-                            component: () => import('../page/dataCenter/tradeRecord.vue'),
+                            path: 'userList',
+                            component: () => import('../page/dataCenter/userList.vue'),
                             meta: {
-                                title: '账变记录'
+                                title: '用户管理'
+                            }
+                        },
+                        {
+                            path: 'userDetail',
+                            component: () => import('../page/dataCenter/userDetail.vue'),
+                            meta: {
+                                title: '用户查看'
                             }
                         },
                     ]
                 },
-
-
-
-
+                {
+                    path: '/sysCenter',
+                    component: () => import('../page/sysCenter/index.vue'),
+                    meta: {
+                        title: '系统管理'
+                    },
+                    redirect:'/sysCenter/roleManagement',
+                    children:[
+                        {
+                            path: 'roleManagement',
+                            component: () => import('../page/sysCenter/roleManagement.vue'),
+                            meta: {
+                                title: '角色权限管理'
+                            }
+                        },
+                        {
+                            path: 'accountManagement',
+                            component: () => import('../page/sysCenter/accountManagement.vue'),
+                            meta: {
+                                title: '账户管理'
+                            }
+                        },
+    
+                    ]
+                },
 
                 {
                     path: '/404',

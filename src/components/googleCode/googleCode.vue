@@ -258,6 +258,7 @@ input::-webkit-inner-spin-button {
     background: url('../../assets/img/publicPics/googleTitleBg.png');
     background-repeat:no-repeat;
     background-size:100% 15px;
+    background-position: 0 -1px;
 
 }
 

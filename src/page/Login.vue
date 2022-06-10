@@ -1,11 +1,11 @@
 <template>
     <div class="login-wrap">
-        <div class="top">
+        <!-- <div class="top">
             <p>
                 <img src="@/assets/img/publicPics/logoWhite.png" alt="">
             </p>
             <p>PLAYS中控管理</p>
-        </div>
+        </div> -->
         <div class="ms-login">
             <div class="ms-title">
                 <p>
@@ -82,7 +82,7 @@ export default {
             setPWForm: false,
             param: {
                 userName: 'baicai',
-                password: '123321'
+                password: '123456'
             },
             rules: {
                 userName: [{ required: true, message: '必填', trigger: 'blur' }],
@@ -209,9 +209,10 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%; 
-    /* background-size:100% 100%; */
+    background-size:100% 100% !important;
     background: url('../assets/img/publicPics/bg.png');
-    /* background-repeat:no-repeat; */
+    background-repeat:no-repeat;
+    background-position: 0 -1px
 }
 
 .top img {
@@ -259,7 +260,7 @@ export default {
     width: 450px;
     height: 335px;
     max-width: 90%;
-    margin: 150px auto;
+    margin: 250px auto;
     border-radius: 5px;
     background: white;
     overflow: hidden;

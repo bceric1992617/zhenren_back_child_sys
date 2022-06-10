@@ -51,6 +51,7 @@ export default {
         return {
             items: [    // 水平一级菜单栏的菜单
                 { index: 'dataCenter', title: '数据中心' },
+                { index: 'sysCenter', title: '系统管理' },
 
             ]
         }

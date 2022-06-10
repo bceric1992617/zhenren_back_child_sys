@@ -19,12 +19,12 @@ export default {
         return {
             items: [
                 {
-                    index: 'tradeList',
-                    title: '交易单查询'
+                    index: 'roleManagement',
+                    title: '角色权限管理'
                 },
                 {
-                    index: 'userList',
-                    title: '用户管理'
+                    index: 'accountManagement',
+                    title: '账户管理'
                 },
             ]
         }
