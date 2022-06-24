@@ -305,12 +305,6 @@
 
       </div>
 
-
-
-
-
-    
-
   </div>
 </div>
 </template>
@@ -354,7 +348,7 @@ export default {
   },
   methods:{
     changeSort(column) {},
-    
+
     changeTabActive(type) {
       this.active = type
     },
